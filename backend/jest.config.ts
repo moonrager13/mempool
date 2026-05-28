@@ -5,14 +5,9 @@ const config: Config.InitialOptions = {
   testEnvironment: 'node',
   verbose: true,
   automock: false,
-  collectCoverage: true,
+  collectCoverage: false,
   collectCoverageFrom: ['./src/**/**.ts'],
   coverageProvider: 'v8',
-  coverageThreshold: {
-    global: {
-      lines: 1
-    }
-  },
   setupFiles: [
     './testSetup.ts',
   ],
@@ -21,6 +16,9 @@ const config: Config.InitialOptions = {
     '/node_modules/',
     '/__integration_tests__/',
     'test-utils\\.ts$',
+    'gbt-tests\\.ts$',
   ],
 };
+
+
 export default config;

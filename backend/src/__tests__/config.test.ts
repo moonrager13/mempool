@@ -8,7 +8,7 @@ describe('Mempool Backend Config', () => {
 
   test('should return defaults when no file is present', () => {
     jest.isolateModules(() => {
-      jest.mock('../../mempool-config.json', () => ({}), { virtual: true });
+      jest.mock('../../mempool-config.json', () => ({}));
 
       const config = jest.requireActual('../config').default;
 
@@ -172,7 +172,7 @@ describe('Mempool Backend Config', () => {
   test('should override the default values with the passed values', () => {
     jest.isolateModules(() => {
       const fixture = JSON.parse(fs.readFileSync(`${__dirname}/../__fixtures__/mempool-config.template.json`, 'utf8'));
-      jest.mock('../../mempool-config.json', () => (fixture), { virtual: true });
+      jest.mock('../../mempool-config.json', () => (fixture));
 
       const config = jest.requireActual('../config').default;
 

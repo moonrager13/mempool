@@ -1,21 +1,23 @@
 {
   "compilerOptions": {
-    "module": "commonjs",
+    "module": "node16",
     "target": "esnext",
-    "types": ["node", "jest"],
+    "types": [],
     "lib": ["es2019", "dom"],
     "strict": true,
     "skipLibCheck": true,
     "noImplicitAny": false,
+    "ignoreDeprecations": "5.0",
     "sourceMap": false,
     "outDir": "dist",
-    "moduleResolution": "node",
+    "rootDir": "./src",
+    "moduleResolution": "node16",
     "typeRoots": [
       "node_modules/@types"
     ],
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
-    "allowJs": true,
+    "allowJs": true
   },
   "include": [
     "src/**/*.ts"
