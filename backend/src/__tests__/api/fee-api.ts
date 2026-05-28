@@ -25,7 +25,8 @@ const mempoolInfo: IBitcoinApi.MempoolInfo = {
   minrelaytxfee: 0.00001,
 };
 
-describe('Fee API', () => {
+describe('Fee API', 
+  () => {
   test('should calculate recommended fees properly for sub-sat mempool', () => {
     const fee = feeApi.calculateRecommendedFee(feeMempoolBlocks.subsat, subSatMempoolInfo);
     expect(fee.fastestFee).toBe(2);
