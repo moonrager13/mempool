@@ -57,13 +57,15 @@
     "TLS_ENABLED": true
   },
   "ESPLORA": {
-    "REST_API_URL": "http://127.0.0.1:3000",
+    "REST_API_URL": ",
     "UNIX_SOCKET_PATH": "/tmp/esplora-bitcoin-mainnet",
     "BATCH_QUERY_BASE_SIZE": 1000,
     "RETRY_UNIX_SOCKET_AFTER": 30000,
     "REQUEST_TIMEOUT": 10000,
     "FALLBACK_TIMEOUT": 5000,
-    "FALLBACK": [],
+    "FALLBACK": [
+
+    ],
     "MAX_BEHIND_TIP": 2
   },
   "SECOND_CORE_RPC": {
